@@ -8,6 +8,8 @@ Here are several small tasks. Each of them is located in their own js files.
 
 Given k (number). Evaluate the expression: 4 \* (2k - 1)
 
+
+
 ### volumeCone.js
 
 Given height h and radius r of a cone. Evaluate [volume of a cone](https://www.cuemath.com/measurement/volume-of-cone/).
