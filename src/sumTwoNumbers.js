@@ -6,21 +6,18 @@
  */
 module.exports.sumTwoNumbers = function sumTwoNumbers(firstNumber, secondNumber) {
   
-  if ( typeof firstNumber === 'string' && typeof secondNumber === 'string'){
-    let firstNumber1 = firstNumber.replaceAll(" ", "");
-    let secondNumber1 = secondNumber.replaceAll(" ", "");
-
-    let firstNumber2 = Number(firstNumber1);
-    let secondNumber2 = Number(secondNumber1);
-    let result = firstNumber2 + secondNumber2;
-
-    return result;
+  if ( typeof firstNumber === 'string'){
+     firstNumber = firstNumber.replaceAll(" ", "");
+     firstNumber = +firstNumber;
   }
-    let firstNumber2 = +firstNumber;
-    let secondNumber2 = +secondNumber;
+    
+    if (typeof secondNumber === 'string') {
+    secondNumber = secondNumber.replaceAll(" ", "");
+    secondNumber = +secondNumber;
+    }
 
-
-    let result = firstNumber2 + secondNumber2;
+    
+    let result = firstNumber + secondNumber;
   return result;
 
   }
