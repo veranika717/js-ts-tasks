@@ -4,5 +4,21 @@
  * @returns {Object}
  */
 module.exports.getMaximalSequence = function getMaximalSequence(arr) {
-  throw new Error('Not implemented'); // remove me and write a solution
+  let currentMaxSequence = 0;
+  let maxSequencePosition = 0;
+  for (i = 0; i < arr.length - 1; i++) {
+    let localMaxSequence = 1;
+    for (j = i + 1; j < arr.length; j++) {
+      if (arr[i] == arr[j]) {
+        localMaxSequence += 1;
+      } else {
+        break;
+      }
+    }
+    if (localMaxSequence > currentMaxSequence) {
+      currentMaxSequence = localMaxSequence;
+      maxSequencePosition = i;
+    }
+  }
+  return arr.slice(maxSequencePosition, maxSequencePosition + currentMaxSequence);
 };
