@@ -13,5 +13,8 @@
  * @returns {function}
  */
 module.exports.palindrome = function palindrome(TestUtils) {
-  throw new Error('Not implemented'); // remove this line and create your solution
+  return function(text) {
+    text = text.replaceAll(/\W|_/g, "").toLowerCase(); // Убираем все неалфавитно-цифровые символы и приводим к нижнему регистру
+    return TestUtils.isPalindrome.call({str: text});
+  };
 };
