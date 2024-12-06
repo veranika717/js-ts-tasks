@@ -14,9 +14,11 @@
  * @returns {function}
  */
 module.exports.censorship = function censorship(forbidden) {
-  const find = new RegExp(forbidden. join('|'), 'g');
+  const find = new RegExp(forbidden. join('|'), 'g'); //Создаётся регулярное выражение, которое будет искать любые из указанных слов в строке
+  //Массив forbidden преобразуется в строку, где слова разделены символом |.
    return function (string) {
-     return string.replace(find, match => '*'.repeat(match.length)); 
+     return string.replace(find, match => '*'.repeat(match.length)); //Метод replace проходит по строке и заменяет каждое вхождение слова, соответствующего регулярному выражению find
+     //Каждое найденное слово передаётся как аргумент match в функцию. Она возвращает строку из звёздочек (*), длина которой совпадает с длиной найденного слова
    };
 
 }

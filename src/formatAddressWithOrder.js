@@ -9,8 +9,9 @@
  * @returns {function}
  */
 module.exports.formatAddressWithOrder = function formatAddressWithOrder(order) {
-  return function(address) {
-    let result = order.map(temp => address[temp]);
-      return result.join(', ');
+  return function(address) { //функция принимает объект address
+    let result = order.map(temp => address[temp]);//Метод map создаёт новый массив.
+      //temp будет последовательно принимать значения из массива order
+      return result.join(', '); //объединяет элементы массива в строку, разделяя их запятой и пробелом.
   }
 };

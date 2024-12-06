@@ -4,11 +4,11 @@
  * @returns {function}
  */
 module.exports.primeNumbers = function primeNumbers(highestNumber) {
-function isPrime(num) {
+function isPrime(num) { //является ли число num простым
   if (num <= 1) {
     return false;
   }
-  for (let i = 2; i <= Math.sqrt(num); i++) {
+  for (let i = 2; i <= num - 1; i++) { //Math.sqrt(num)
     if (num % i === 0) {
       return false;
     }
