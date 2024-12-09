@@ -18,7 +18,7 @@ set age(age) {
   if (typeof age !== 'number') {
     throw new Error('must be a number')
   }
-  this.#age = value;
+  this.#age = age;
 }
 
 set firstName(firstName) {
@@ -127,8 +127,9 @@ module.exports.createUsersSortFn = function (TestUtils) {
  */
 module.exports.celebrate = function (users) {
   for (let i = 0; i < users.length; i++) {
-    if (i % 2 === 1) {
-      users[i].celebrateBirthday();
+    if (i % 2 === 0) { 
+       users[i].celebrateBirthday();
+
     }
   }
   return users;
