@@ -80,7 +80,9 @@ module.exports.createUsers = function (data) {
     users.push(new User(firstName, secondName, age));
   }
   return users;
-};
+}; 
+//const users = data.map(({ firstName, secondName, age }) => new User(firstName, secondName, age));
+//return users;
 
 /**
  * Find Users in Array of Users who's age equals the provided age
@@ -107,10 +109,8 @@ module.exports.createUsersSortFn = function (TestUtils) {
   function sort(users) {
     for (let i = 0; i < users.length - 1; i++) {
       for (let j = 0; j < users.length - i - 1; j++) {
-        if (users[j + 1].age - users[j].age > 0) {
-          const temp = users[j];
-          users[j] = users[j + 1];
-          users[j + 1] = temp;
+        if (users[j + 1].age > users[j].age) {
+          [users[j], users[j + 1]] = [users[j + 1], users[j]];
         }
       }
     }
@@ -119,6 +119,8 @@ module.exports.createUsersSortFn = function (TestUtils) {
 
   return sort;
 };
+// function sort(users) {
+//   return users.sort((i, j) => j.age - i.age); }
 
 /**
  * In Array of Users every User under odd index in Array should celebrate his birthday
