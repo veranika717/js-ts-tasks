@@ -22,7 +22,7 @@ module.exports.censorship = function censorship(forbidden) {
     for(let i = 0; i < forbidden.length; i++) {
       for(let j = 0; j < str.length; j++) {
         if (str.includes(forbidden[i])) {
-          str = str.replase(forbidden[i], '*'.repeat(forbidden[i]));
+          str = str.replace(forbidden[i], '*'.repeat(forbidden[i].length));
         }
       }
     } return str;
