@@ -7,13 +7,13 @@
  */
 module.exports.debounce = function debounce(fn, delay) {
   let timeout;
-  let isExecuted = false;
+  let isExecuted = true;
   return function(...args) {
-    if(!isExecuted) {
+    if(isExecuted) {
       fn.apply(this, args);
-      isExecuted = true;
-    timeout = setTimeout(() => {
       isExecuted = false;
+    timeout = setTimeout(() => {
+      isExecuted = true;
   }, delay);
   } 
 }
