@@ -2,4 +2,86 @@
 
 body {
   background: linear-gradient(45deg, #FFD6C3, #FCB5FF, #BEC6FF);
+  color:white;
+  font-family: "Inter", Helvetica, serif;
+  font-size: 18px;
+
+}
+.top-bar {
+  margin-top: 15%;
+  margin-left: 5%;
+  margin-right: 5%;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+.profile {
+  margin-top: 3%;
+  display: flex;
+  margin-left: 5%;
+  margin-right: 5%;
+  align-items: center;
+ 
+}
+.logo {
+  background-color:#7B6FC5;
+  height: 87px;
+  width: 87px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10%;
+
+}
+.logo img{
+  width: 52px;
+  height: 45px;
+}
+.frames{
+  gap: 13%;
+  display: flex;
+}
+.frame{
+  text-align: center;
+}
+.text{
+font-size: smaller;
+font-weight: lighter;
+display: block;
+}
+.frame499{
+  flex-direction: column;
+  margin-top: 3%;
+  display: flex;
+  margin-left: 5%;
+  margin-right: 5%;
+  align-items: flex-start;
+}
+.sign1{
+  color: #8E8E8E;
+  font-size: 15px;
+  font-weight: lighter;
+}
+.sign2{
+  color: #D4E0ED;
+  font-size: 16px;
+  font-weight: lighter;
+}
+.actions{
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 5%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) min-content;
+  gap: 6px;
+ 
+}
+.button{
+  color:white;
+  background-color: black;
+  border-radius: 20%;
+}
+.b1{
+  background-color: #4192EF;
 }
