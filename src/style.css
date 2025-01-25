@@ -23,6 +23,9 @@ body {
   align-items: center;
  
 }
+button{
+  cursor: pointer;
+}
 .logo {
   background-color:#7B6FC5;
   height: 87px;
@@ -68,20 +71,129 @@ display: block;
   font-size: 16px;
   font-weight: lighter;
 }
+a{
+  text-decoration: none;
+  color: #D4E0ED;
+  font-size: 15px;
+}
 .actions{
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-top: 5%;
   display: grid;
   grid-template-columns: repeat(3, 1fr) min-content;
-  gap: 6px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 6%;
+}
+
+.actions button {
+  flex: 1;
+  font-size: 14px;
+  padding: 5px 15px;
+  border-radius: 5px;
+  border: 1px solid #333;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+.actions .follow {
+  background-color: #4192EF;
+  color: white;
+  border: none;
+}
+
+.highlights{
+  margin-left: 5%; 
+  margin-top: 5%; 
+  display: flex; 
+  justify-content: flex-start;
+  align-items: center; 
+  gap: 16px;
+}
+.highlight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.picture {
+  border-radius: 50%; 
+  width: 55px; 
+  height: 55px;
+  border: 1px solid #505050; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+}
+
+.image{
+  border-radius: 50%; 
+  width: 50px; 
+  height: 50px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  background-color: #7B6FC5;
+}
+.image img{
+  width: 23px; 
+  height: 23px; 
+}
+.text1 { 
+  font-size: small;
+  text-align: center;
+  display: block;
+  font-weight: lighter;
+}
+.tab-bar {
+  width: 360px;
+  height: 40px;
+  border-top: 1px solid #262626;
+ 
+  justify-content:space-around;
+  display: flex;
+  align-items: center;
+  margin-top: 4%;
  
 }
-.button{
-  color:white;
-  background-color: black;
-  border-radius: 20%;
+
+.tab-bar img{
+  width: 25px;
+  height: 25px;
 }
-.b1{
-  background-color: #4192EF;
+.line{
+  border-bottom: 1px solid white ;
+  width: 50%;
 }
+.gallery{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-around;
+  height: 332px;
+}
+.photo img{
+max-width: 120px;
+display: flex;
+}
+.tab-menu{
+  background-color: #111111;
+  justify-content: space-around;
+  display: flex;
+  align-items: flex-start;
+  position: absolute;
+  width: 100%;
+  height: 9.7%;
+  top:90.5%;
+  border-radius: 0 0 39px 39px;
+}.tab-menu img{
+  justify-content: flex-start;
+  width: 30%;
+  height: 30%;
+  margin-top: 2%;
+}
+ 
+
+
+
